@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--
+      ============================================================
+      BRAND SWAP: Update the title below when changing brands
+      This should match META.title in brand.config.ts
+      ============================================================
+    -->
+    <title>Kamloops Dog Grooming and Spa | Professional Dog Grooming</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Manrope:wght@200;400;500;700&display=swap" rel="stylesheet">
+    <script>
+      /**
+       * ============================================================
+       * BRAND SWAP: Update these 5 color values when changing brands
+       * These should match THEME values in brand.config.ts
+       * ============================================================
+       *
+       * brand-bg:           Main background color (light)
+       * brand-text:         Main text color (dark)
+       * brand-primary:      Primary accent (buttons, links)
+       * brand-primary-light: Light version of primary
+       * brand-secondary:    Secondary accent (hover states)
+       */
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Manrope', 'sans-serif'],
+              serif: ['Cormorant Garamond', 'serif'],
+            },
+            colors: {
+              // ========== BRAND COLORS - UPDATE THESE ==========
+              'brand-bg': '#E8E4F0',           // Background (lavender)
+              'brand-text': '#2D2B3A',         // Text (dark purple-charcoal)
+              'brand-primary': '#7B6B9B',      // Primary accent (lavender purple)
+              'brand-primary-light': '#D4CEE8', // Light primary (light lavender)
+              'brand-secondary': '#6B8E6B',    // Secondary accent (sage green)
+              // =================================================
+            },
+            animation: {
+              'fade-up': 'fadeUp 0.8s ease-out forwards',
+              'scroll': 'scroll 40s linear infinite',
+            },
+            keyframes: {
+              fadeUp: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              scroll: {
+                '0%': { transform: 'translateX(0)' },
+                '100%': { transform: 'translateX(-50%)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /*
+        ============================================================
+        BRAND SWAP: Update scrollbar colors to match brand-bg and brand-primary
+        ============================================================
+      */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #E8E4F0; /* brand-bg */
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #7B6B9B; /* brand-primary */
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #5D4E7A; /* darker brand-primary */
+      }
+
+      .text-outline-white {
+        -webkit-text-stroke: 1px rgba(255,255,255,0.3);
+        color: transparent;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-brand-bg text-brand-text antialiased selection:bg-brand-primary selection:text-white">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
